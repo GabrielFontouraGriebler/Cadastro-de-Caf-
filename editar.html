@@ -1,0 +1,101 @@
+<html>
+    <head>  
+        <meta charset="UTF-8">
+        <script type="text/javascript">
+            function validar() {
+                var ID = formulario.ID.value;
+                var nome = formulario.nome.value;
+                var tipo = formulario.tipo.value;
+                var local = formulario.local.value;
+                var categoria = formulario.categoria.value;
+                var quantidade = formulario.quantidade.value;
+                if(ID == ""){
+                    alert("Preencha todos os campos!");
+                    formulario.ID.focus;
+                    return false;
+                }
+                
+                if(nome == ""){
+                    alert("Preencha todos os campos!");
+                    formulario.nome.focus;
+                    return false;
+                }
+        
+                if(tipo == ""){
+                    alert("Preencha todos os campos!");
+                    formulario.tipo.focus;
+                    return false;
+                }
+        
+                if(local == ""){
+                    alert("Preencha todos os campos!");
+                    formulario.local.focus;
+                    return false;
+                }
+        
+                if(categoria == ""){
+                    alert("Preencha todos os campos!");
+                    formulario.categoria.focus;
+                    return false;
+                }
+        
+                if(quantidade == ""){
+                    alert("Preencha todos os campos!");
+                    formulario.quantidade.focus;
+                    return false;
+                }else{
+                    alert("Cadastro realizado com sucesso!");
+                    return true;
+                }
+                
+            }
+        </script>
+        
+        
+        
+        </head>
+        <body>
+            <div>
+                <h1 id="titulo">Edição de cadastro</h1>
+            </div>
+        <form name="formulario" action="editando.php" method="post" >
+                <div class="campo">
+                    <label for="ID" >ID</label>
+                    <input type="text" name="ID" id="ID">
+                </div>
+
+                <div class="campo">
+                    <label for="nome" >Nome/Marca</label>
+                    <input type="text" name="nome" id="nome">
+                </div>
+        
+                <div class="campo">
+                    <label for="tipo" >Tipo de Café</label>
+                    <input type="text" name="tipo" id="tipo">
+                </div>
+        
+                <div class="campo">
+                    <label for="local" >De onde veio</label>
+                    <input type="text" name="local" id="local">
+                </div>
+        
+                <div class="campo">
+                    <label for="categoria" >Categoria</label>
+                    <input type="text" name="categoria" id="categoria">
+                </div>
+        
+                <div class="campo">
+                    <label for="quantidade" >Quantidade</label>
+                    <input type="text" name="quantidade" id="quantidade">   
+                </div>
+           
+        
+           <button class="botao" type="submit" onclick="return validar();">Cadastrar</button>
+           <a href="listagem.php">
+                <input class="botao" type="button" value="Listagem">
+           </a>
+        
+        
+        </form>
+</body>
+</html>

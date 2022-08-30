@@ -1,0 +1,22 @@
+<html>
+    <head>  
+        <meta charset="UTF-8">
+    </head>
+    <script type="text/javascript">
+        function valida() {
+            var apagar = form.deletar.value;
+            if(deletar == ""){
+            alert("Preencha todos os campos!");
+            form.deletar.focus;
+            return false;
+        }
+    }
+    </script>
+<body>
+    <form name="form" action="removendo.php" method="post">
+        <label>ID que deseja deletar: </label>
+        <input type="text" name="deletar" id="deletar">
+        <button type="submit" name="apagar" onclick="return valida();">Apagar</button>
+    </form>
+</body>
+</html>
